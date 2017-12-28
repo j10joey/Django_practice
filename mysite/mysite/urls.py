@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from mysite.views import here, math
+from mysite.views import here, math, menu
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('here/', here),
     path('<int:a>/math/<int:b>/', math),
+    path('menu/', menu),
 ]
